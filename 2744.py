@@ -16,11 +16,10 @@ class Solution:
         pairs = 0
         for word in words:
             # If there is a new word in the map, verifies if the word in reverse exists in the map
-            if word not in mapWords:
-                if word[::-1] in mapWords:
-                    # Counting coincidences
-                    pairs += 1
-                else:
+            if word[::-1] in mapWords:
+                # Counting coincidences
+                pairs += 1
+            else:
                     mapWords.add(word)
         return pairs
 
